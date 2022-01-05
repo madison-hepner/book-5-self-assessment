@@ -38,6 +38,27 @@ const applicationState = {
             "id": 3,
             "name": "Grace Hopper",
             "email": "gracehopper@gmail.com"
+        },
+        {
+            "id": 1,
+            "name": "J.K. ROWLING",
+            "email": "jkrowling@gmail.com"
+
+        },
+        {
+            "id": 2,
+            "name": "STEPHEN KING",
+            "email": "StLing@gmail.com"
+        },
+        {
+            "id": 3,
+            "name": "NORA ROBERTS",
+            "email": "noraroberts@gmail.com"
+        },
+        {
+            "id": 4,
+            "name": "STAN LEE",
+            "email": "StanLee@gmail.com"
         }
 
     ]

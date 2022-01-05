@@ -10,16 +10,17 @@ mainContainer.addEventListener("click", clickEvent => {
         // Get what the user typed into the form fields
         const userAuthor = document.querySelector("input[name='author']").value
         const userLetter = document.querySelector("input[name='letter']").value
-        /*const userBudget = document.querySelector("input[name='serviceBudget']").value
-        const userDate = document.querySelector("input[name='serviceDate']").value
-        */
+        const userRecip = document.querySelector("input[name='recip']").value
+        
+        // const userDate = document.querySelector("input[name='serviceDate']").value
+        
 
         // Make an object out of the user input
         const dataToSendToAPI = {
-            description: userAuthor,
-            address: userLetter,
-            budget: userBudget,
-            neededBy: userDate
+            author: userAuthor,
+            letter: userLetter,
+            recipient: userRecip,
+            // neededBy: userDate
         }
 
         // Send the data to the API for permanent storage
@@ -60,7 +61,7 @@ export const Letter = () => {
 export const Recipients = () => {
     let html =
     `<select class="recip" id="recip">
-    <option value="">Choose</option>
+    <option value="">Choose Recipient</option>
     ${
         recips.map(
             recip => {
