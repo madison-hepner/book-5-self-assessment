@@ -2,35 +2,42 @@ const applicationState = {
     authors: [
         {
             "id": 1,
-            "name": "J.K. ROWLING"
+            "name": "J.K. ROWLING",
+            "email": "jkrowling@gmail.com"
 
         },
         {
             "id": 2,
-            "name": "STEPHEN KING"
+            "name": "STEPHEN KING",
+            "email": "StLing@gmail.com"
         },
         {
             "id": 3,
-            "name": "NORA ROBERTS"
+            "name": "NORA ROBERTS",
+            "email": "noraroberts@gmail.com"
         },
         {
             "id": 4,
-            "name": "STAN LEE"
+            "name": "STAN LEE",
+            "email": "StanLee@gmail.com"
         }
     ],
 
     recipients: [
         {
             "id": 1,
-            "name": "Maya Angelou"
+            "name": "Maya Angelou",
+            "email": "MayaAngelou@gmail.com"
         },
         {
             "id": 2,
-            "name": "Mark Twain"
+            "name": "Mark Twain",
+            "email": "MarkTwain@gmail.com"
         },
         {
             "id": 3,
-            "name": "Grace Hopper"
+            "name": "Grace Hopper",
+            "email": "gracehopper@gmail.com"
         }
 
     ]

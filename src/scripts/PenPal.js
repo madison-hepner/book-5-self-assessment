@@ -1,4 +1,4 @@
-import { Page } from "./form.js"
+import { Authors, Letter, Recipients } from "./form.js"
 
 
 export const letterForm = () => {
@@ -8,27 +8,16 @@ export const letterForm = () => {
         <article class="authors">
         <section class="choice__author options">
             <h2>Authors</h2>
-            ${Entrees()}
+                ${Authors()}
         </section>
-        <section class="choices__sides options">
-            <h2>Sides</h2>
-            ${Sides()}
+        <section class="choices__letter options">
+            <h2>Letter</h2>
+                ${Letter()}
         </section>
-        <section class="choices__veggies options">
-            <h2>Veggies</h2>
-            ${Veggies()}
+        <section class="choices__recip options">
+            <h2>Recipient</h2>
+                ${Recipients()}
         </section>
     </article>
-
-
-
-        <section class="serviceForm">
-            ${ServiceForm()}
-        </section>
-
-        <section class="serviceRequests">
-            <h2>Service Requests</h2>
-            ${Requests()}
-        </section>
     `
 }

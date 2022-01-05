@@ -4,23 +4,21 @@
 .field {
     display: flex;
     flex-direction: column;
-    padding: .5em;
+    border: .5px solid black;
+    height: 200px;
+    width: 600px;
+    padding: 1em;
+    border-radius: .5em;
+    font-size: 12pt;
+    align-items: flex-start;
 }
 
-.input {
-    width: 780px;
-    height: 30px;
-}
 
-.label {
-    font-size: 15px;
-    padding: 0.1em;
-}
 
-#submitRequest {
+#sendLetter {
     margin-top: .8em;
-    padding: 0.5rem;
-    background-color: rgb(111, 72, 227);
+    background-color: grey;
+    opacity: 80%;
     color: rgb(230, 220, 255);
     font-size: 1rem;
 }
