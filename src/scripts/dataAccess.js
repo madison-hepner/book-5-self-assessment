@@ -61,7 +61,9 @@ const applicationState = {
             "email": "StanLee@gmail.com"
         }
 
-    ]
+    ],
+
+    letters: []
 }
 
 
@@ -73,17 +75,40 @@ export const getRecips = () => {
     return applicationState.recipients.map(recipient => ({...recipient}))
 }
 
+export const getLetters = () => {
+    return applicationState.letters.map(letter => ({...letter}))
+}
 
 
 const API = "http://localhost:8088"
 
-export const fetchRequests = () => {
-    return fetch(`${API}/requests`)
+export const searchLetter = () => {
+    return fetch(`${API}/letters`)
         .then(response => response.json())
         .then(
-            (serviceRequests) => {
+            (theLetters) => {
                 // Store the external state in application state
-                applicationState.requests = serviceRequests
+                applicationState.letters = theLetters
             }
         )
+}
+
+
+
+export const sendLetter = (tosendLetters) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(tosendLetters)
+    }
+
+
+    return fetch(`${API}/letters`, fetchOptions)
+    .then(response => response.json())
+    .then(() => {
+        container.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+        
 }

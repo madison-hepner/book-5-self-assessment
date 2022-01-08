@@ -1,5 +1,12 @@
-import { Authors, Letter, Recipients } from "./form.js"
+import { Authors, Letter, Recipients, Letters1, } from "./form.js"
+import { sendLetter } from "./dataAccess.js"
 
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "sendLetter") {
+        sendLetter()
+    }
+})
 
 export const letterForm = () => {
     return `
@@ -19,5 +26,12 @@ export const letterForm = () => {
                 ${Recipients()}
         </section>
     </article>
+
+        <article class="sentLetters">
+        <section class="view__sent options">
+            <h2>Sent Letters</h2>
+              ${Letters1()}
+            </section>
+        </article>
     `
 }
