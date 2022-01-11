@@ -107,7 +107,6 @@ export const getTopics = () => {
 }
 
 
-
 export let setTopic = (id) => {
     applicationState.topics.typeId = id
 }

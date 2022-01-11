@@ -89,13 +89,65 @@ const convertRequestToListRecips = (recips) => {
 }
 */
 
-export const Letters1 = () => {
+
+export const sentLetters = () => {
+    /* 
+    const recips = getRecips()
+    let recipshtml = "<ul>"
+
+    const recipItems = recips.map(recip => {
+        return `<li> ${recip.id}  ${recip.name}
+        </li> `
+    })
+
+    recipshtml += recipItems.join("")
+    recipshtml += "</ul>"
+
+    return recipshtml
+}
+*/
+    
+
+    const authors = getAuthors()
+    let authorshtml = "<ul>"
+
+    const authorItems = authors.map(author => {
+        return `<li> ${author.id}  ${author.name}
+        </li> `
+    })
+
+    authorshtml += authorItems.join("")
+    authorshtml += "</ul>"
+
+    return authorshtml
+    }
+    
+/*
+    const recips = getRecips()
+        let html = "<ul>"
+
+        const recipItems = recips.map(recip => {
+            return `<li> ${recip.id}  ${recip.name}
+            </li> `
+      })
+
+        html += recipItems.join("")
+        html += "</ul>"
+
+        return html
+    }
+    */
+    
+
+ /*
+export const sentLetters = () => {
+    const authors = getAuthors()
+    const recips = getRecips()
+    const letters = getLetters()
+
     let html = ""
 
-    for (const letters of getLetters()) {
-        const authors = getAuthors()
-        const recips = getRecips()
-        const letters = getLetters()
+    for (const post of getLetters()) {
         
         const foundRecip = getRecips().find(
             (recips) => {
@@ -126,9 +178,9 @@ export const Letters1 = () => {
     }
 
 
-    return html
+return html
 }
-
+*/
 
 
 /*

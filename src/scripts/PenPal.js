@@ -1,4 +1,4 @@
-import { Authors, Letter, Recipients, Letters1, } from "./form.js"
+import { Authors, Letter, Recipients, sentLetters, } from "./form.js"
 import { sendLetter } from "./dataAccess.js"
 import { Topics } from "./Topics.js"
 
@@ -37,7 +37,7 @@ export const letterForm = () => {
         <article class="sentLetters">
         <section class="view__sent options">
             <h2>Sent Letters</h2>
-              ${Letters1()}
+              ${sentLetters()}
             </section>
         </article>
     `
