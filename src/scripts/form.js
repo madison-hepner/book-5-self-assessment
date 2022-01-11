@@ -81,25 +81,66 @@ export const Recipients = () => {
 
 return html
 }
-
-const convertRequestToListElement = (letter) => {
-    return `<li>${letter.letter} 
+/*
+const convertRequestToListRecips = (recips) => {
+    
+    return `<li> ${recips.name} ${recips.email}
     </li>`
 }
+*/
 
 export const Letters1 = () => {
-    const letters = getLetters()
-    let html = `
-    <ul> 
-        ${
-            letters.map((letter) => convertRequestToListElement(letter))
-        }
+    let html = ""
 
-    </ul>
-    `
+    for (const letters of getLetters()) {
+        const authors = getAuthors()
+        const recips = getRecips()
+        const letters = getLetters()
+        
+        const foundRecip = getRecips().find(
+            (recips) => {
+                if (parseInt(letters.recipients) === recips.id) {
+                    return true
+                }
+                return false
+            }
+        )
+    
+    
+        const foundAuthor = getAuthors().find(
+            (authors) => {
+                if (parseInt(letters.authors) === authors.id) {
+                    return true
+                }
+                return false
+            }
+        )
+    
+        html += `<div class="recipName"> Dear ${foundRecip.name}</div>`
+    
+            html += `
+            <div class="letterhtml">${letters.letter}</div>
+            <div class="authorhtml">From your friend ${foundAuthor.name}</div>
+            
+            `
+    }
+
 
     return html
 }
 
 
 
+/*
+const authors = getAuthors()
+    const recip = getRecips()
+    const letters = getLetters()
+    let html = `
+    <ul> 
+        ${
+            recip.map((recips) => convertRequestToListRecips(recip))
+        }
+
+    </ul>
+    `
+*/

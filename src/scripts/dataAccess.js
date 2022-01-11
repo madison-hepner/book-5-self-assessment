@@ -63,7 +63,30 @@ const applicationState = {
 
     ],
 
-    letters: []
+    letters: [],
+
+    topics: [
+        { 
+            "id": 1,
+            "topic": "business",
+        },
+        {
+            "id": 2,
+            "topic": "friendly",
+        },
+        {
+            "id": 3,
+            "topic": "family"
+        },
+        {
+            "id": 4,
+            "topic": "congradulations"
+        },
+        {
+            "id": 5,
+            "topic": "condolences"
+        }
+    ]
 }
 
 
@@ -78,6 +101,17 @@ export const getRecips = () => {
 export const getLetters = () => {
     return applicationState.letters.map(letter => ({...letter}))
 }
+
+export const getTopics = () => {
+    return applicationState.topics.map(topic => ({...topic}))
+}
+
+
+
+export let setTopic = (id) => {
+    applicationState.topics.typeId = id
+}
+
 
 
 const API = "http://localhost:8088"

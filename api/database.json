@@ -19,67 +19,40 @@
       "id": 3
     },
     {
-      "author": 1,
-      "letter": "hi",
-      "recipient": 1,
       "id": 4
     },
     {
-      "author": 2,
+      "author": 3,
       "letter": "hi",
-      "recipient": 2,
+      "recipient": 3,
       "id": 5
     },
     {
-      "author": 4,
-      "letter": "hi",
+      "author": 1,
+      "letter": "hello",
       "recipient": 2,
       "id": 6
     },
     {
-      "author": 2,
-      "letter": "jhkjhkjhkjh",
-      "recipient": 2,
       "id": 7
     },
     {
+      "author": 2,
+      "letter": "hi",
+      "recipient": 2,
       "id": 8
     },
     {
-      "author": 1,
-      "letter": "llllll",
-      "recipient": 2,
       "id": 9
     },
     {
       "id": 10
     },
     {
-      "author": 3,
-      "letter": "e3",
-      "recipient": 3,
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "author": 1,
-      "letter": "test",
-      "recipient": 2,
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
       "author": 2,
-      "letter": "test2",
+      "letter": "hiiiiiiiiiii",
       "recipient": 2,
-      "id": 15
-    },
-    {
-      "id": 16
+      "id": 11
     }
   ]
 }
