@@ -1,13 +1,6 @@
 import { Authors, Letter, Recipients, sentLetters, } from "./form.js"
-import { sendLetter } from "./dataAccess.js"
 import { Topics } from "./Topics.js"
 
-
-document.addEventListener("click", (event) => {
-    if (event.target.id === "sendLetter") {
-        sendLetter()
-    }
-})
 
 export const letterForm = () => {
     return `
@@ -23,7 +16,7 @@ export const letterForm = () => {
                 ${Letter()}
         </section>
 
-        <section class="chouces__topic options">
+        <section class="choices__topic options">
             <h2>Topics</h2>
                 ${Topics()}
         </section>

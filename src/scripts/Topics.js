@@ -22,7 +22,7 @@ export const Topics = () => {
 
     const topicItems = topics.map(topic => {
         return `<li>
-        <input type ="radio" name="topics" value="${topic.id}" /> ${topic.topic}
+        <input type ="radio" id="topics" value="${topic.id}" /> ${topic.topic}
         </li> `
     })
 

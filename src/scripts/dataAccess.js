@@ -40,23 +40,23 @@ const applicationState = {
             "email": "gracehopper@gmail.com"
         },
         {
-            "id": 1,
+            "id": 4,
             "name": "J.K. ROWLING",
             "email": "jkrowling@gmail.com"
 
         },
         {
-            "id": 2,
+            "id": 5,
             "name": "STEPHEN KING",
             "email": "StLing@gmail.com"
         },
         {
-            "id": 3,
+            "id": 6,
             "name": "NORA ROBERTS",
             "email": "noraroberts@gmail.com"
         },
         {
-            "id": 4,
+            "id": 7,
             "name": "STAN LEE",
             "email": "StanLee@gmail.com"
         }
@@ -68,11 +68,11 @@ const applicationState = {
     topics: [
         { 
             "id": 1,
-            "topic": "business",
+            "topic": "business"
         },
         {
             "id": 2,
-            "topic": "friendly",
+            "topic": "friendly"
         },
         {
             "id": 3,
@@ -106,6 +106,18 @@ export const getTopics = () => {
     return applicationState.topics.map(topic => ({...topic}))
 }
 
+
+export let setAuthors = (id) => {
+    applicationState.authors.authorId = id
+}
+
+export let setRecips = (id) => {
+    applicationState.recipients.recipId = id
+}
+
+export let setLetters = (id) => {
+    applicationState.letters.letter = id
+}
 
 export let setTopic = (id) => {
     applicationState.topics.typeId = id

@@ -1,8 +1,10 @@
-import { getAuthors, getRecips, getLetters, sendLetter } from "./dataAccess.js"
+import { getAuthors, getRecips, getLetters, sendLetter, setAuthors, setRecips, setLetters, setTopic, getTopics } from "./dataAccess.js"
 
 const authors = getAuthors()
 const recips = getRecips()
 const letters = getLetters()
+const topics = getTopics()
+
 
 const mainContainer = document.querySelector("#container")
 
@@ -12,16 +14,17 @@ mainContainer.addEventListener("click", clickEvent => {
         const userAuthor = document.querySelector("#author").value
         const userLetter = document.querySelector("input[name='letter']").value
         const userRecip = document.querySelector("#recip").value
+        const userTopic = document.querySelector("#topics").value
         
         // const userDate = document.querySelector("input[name='serviceDate']").value
         
-
+        
         // Make an object out of the user input
         const dataToSendToAPI = {
-            author: +userAuthor,
+            authorId: +userAuthor,
             letter: userLetter,
-            recipient: +userRecip
-            // neededBy: userDate
+            recipId: +userRecip,
+            topicId: +userTopic
         }
 
         // Send the data to the API for permanent storage
@@ -81,6 +84,8 @@ export const Recipients = () => {
 
 return html
 }
+
+
 /*
 const convertRequestToListRecips = (recips) => {
     
@@ -90,7 +95,6 @@ const convertRequestToListRecips = (recips) => {
 */
 
 
-export const sentLetters = () => {
     /* 
     const recips = getRecips()
     let recipshtml = "<ul>"
@@ -105,7 +109,7 @@ export const sentLetters = () => {
 
     return recipshtml
 }
-*/
+//////////////////////////////////////////////////
     
 
     const authors = getAuthors()
@@ -122,6 +126,7 @@ export const sentLetters = () => {
     return authorshtml
     }
     
+
 /*
     const recips = getRecips()
         let html = "<ul>"
@@ -136,18 +141,68 @@ export const sentLetters = () => {
 
         return html
     }
-    */
     
+    */
 
- /*
+const buildLetterListItem = (letters) => {
+
+    const authors = getAuthors()
+    const recips = getRecips()
+    const topics = getTopics()
+
+    const foundRecip = getRecips().find(
+        (recips) => {
+            return recips.id === letters.recipId
+        }
+    )
+
+    const foundAuthor = getAuthors().find(
+        (authors) => {
+            return authors.id === letters.authorId
+        }
+    )
+
+    const foundTopic = getTopics().find(
+        (topic) => {
+            return topic.id === letters.topicId
+        }
+    )
+    
+    return `<li>Dear ${foundRecip.name} 
+    
+    ${letters.letter}
+
+    topic of ${foundTopic.topic}
+
+    sincerely ${foundAuthor.name}
+    </li>`
+
+}
+
 export const sentLetters = () => {
     const authors = getAuthors()
     const recips = getRecips()
     const letters = getLetters()
 
+    
+    let html = `
+    <ul> 
+        ${
+            letters.map((letter) => buildLetterListItem(letter))
+        }
+
+    </ul>
+    `
+
+    return html
+}
+
+    
+
+/*
     let html = ""
 
-    for (const post of getLetters()) {
+    for (const letters of getLetters()) {
         
         const foundRecip = getRecips().find(
             (recips) => {
@@ -178,10 +233,20 @@ export const sentLetters = () => {
     }
 
 
-return html
+    const sales = getPurchases()
+
+    let html = "<ul>"
+    const listPuchases = sales.map(
+        (sale) => {
+            return buildOrderListItem(sale)
+        }
+    )
+    html += listPuchases.join("")
+    html += "</ul>"
+
+    return html
 }
 */
-
 
 /*
 const authors = getAuthors()
@@ -195,4 +260,44 @@ const authors = getAuthors()
 
     </ul>
     `
+*/
+
+/*
+const convertRequestToListElement = (letter) => {
+    return `<li>${letter.letter} 
+    </li>`
+}
+
+export const Letters1 = () => {
+    const letters = getLetters()
+    let html = `
+    <ul> 
+        ${
+            letters.map((letter) => convertRequestToListElement(letter))
+        }
+    </ul>
+    `
+
+    return html
+}
+
+const buildLetterListItem = (letters) => {
+    const foundRecip = getRecips.find(
+        (recips) => {
+            return recips.id === letters.recipId
+        }
+    )
+
+    const foundAuthor = getAuthors.find(
+        (authors) => {
+            return authors.id === letters.AuthorId
+        }
+    )
+
+    const foundTopic = getTopics.find(
+        (topic) => {
+            return topic.id === topic.topicId
+        }
+    )
+
 */
