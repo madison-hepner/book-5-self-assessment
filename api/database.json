@@ -20,6 +20,20 @@
       "recipId": 7,
       "topicId": 1,
       "id": 18
+    },
+    {
+      "authorId": 3,
+      "letter": "This is a test for readability of a longer letter. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "recipId": 4,
+      "topicId": 1,
+      "id": 19
+    },
+    {
+      "authorId": 2,
+      "letter": "another test for readability. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "recipId": 1,
+      "topicId": 1,
+      "id": 20
     }
   ]
 }

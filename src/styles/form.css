@@ -2,8 +2,10 @@
 
 #container {
     background-color: #F5F5F5;
-    border: 5px solid silver;
+    border: 5px solid #9c9c9c;
     padding: .8em;
+    margin: none;
+    border-radius:0.5em;
 }
 
 .field {
@@ -21,23 +23,27 @@
 
 .recipPlace {
     height:40px;
-    width: 500px;
+    width: 525px;
     background-color: grey;
     padding: .2em;
-
     border-top: 1.9px solid black;
 }
 
 
 .authorPlace {
     height:20px;
-    width: 500px;
+    width: 525px;
     background-color: grey;
     padding: .2em;
     opacity: 66%;
     color: black;
 
     border-bottom: 1.5px solid black;
+}
+
+.letterPlace {
+    height: auto;
+    width: 525px;
 }
 
 .topic {
