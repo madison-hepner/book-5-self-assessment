@@ -9,59 +9,17 @@
     },
     {
       "authorId": 3,
-      "letter": "hiii",
-      "recipId": 2,
-      "topicId": 1,
-      "id": 6
-    },
-    {
-      "authorId": 1,
-      "letter": "hiiii2",
-      "recipId": 3,
-      "topicId": 1,
-      "id": 10
-    },
-    {
-      "authorId": 2,
-      "letter": "hiii3",
-      "recipId": 2,
-      "topicId": 1,
-      "id": 12
-    },
-    {
-      "authorId": 1,
-      "letter": "hiii3",
-      "recipId": 1,
-      "topicId": 1,
-      "id": 13
-    },
-    {
-      "authorId": 1,
-      "letter": "hiii3",
-      "recipId": 1,
-      "topicId": 1,
-      "id": 14
-    },
-    {
-      "authorId": 2,
-      "letter": "hello",
-      "recipId": 3,
-      "topicId": 1,
-      "id": 15
-    },
-    {
-      "authorId": 1,
-      "letter": "hihihi",
-      "recipId": 1,
-      "topicId": 1,
-      "id": 16
-    },
-    {
-      "authorId": 3,
       "letter": "hello this may be the final test",
       "recipId": 3,
       "topicId": 1,
       "id": 17
+    },
+    {
+      "authorId": 3,
+      "letter": "this is a letter regarding your car's extended warranty.",
+      "recipId": 7,
+      "topicId": 1,
+      "id": 18
     }
   ]
 }

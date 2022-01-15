@@ -168,14 +168,14 @@ const buildLetterListItem = (letters) => {
         }
     )
     
-    return `<li>Dear ${foundRecip.name} 
+    return `<ul class="boxPlace"><h2 class="recipPlace">Dear ${foundRecip.name}, </h2>
     
-    ${letters.letter}
+    <h4 class="letterPlace">${letters.letter}</h2>
 
-    topic of ${foundTopic.topic}
+    <div class="topicPlace">topic of: ${foundTopic.topic}</div>
 
-    sincerely ${foundAuthor.name}
-    </li>`
+    <h4 class="authorPlace">sincerely ${foundAuthor.name}</h4>
+    </ul>`
 
 }
 

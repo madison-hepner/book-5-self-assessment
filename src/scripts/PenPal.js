@@ -4,7 +4,7 @@ import { Topics } from "./Topics.js"
 
 export const letterForm = () => {
     return `
-        <h1>Pen Pal Society</h1>
+        <h1 class="topic">Pen Pal Society</h1>
 
         <article class="authors">
         <section class="choice__author options">

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
+#container {
+    background-color: #F5F5F5;
+    border: 5px solid silver;
+    padding: .8em;
+}
 
 .field {
     display: flex;
@@ -11,8 +16,44 @@
     border-radius: .5em;
     font-size: 12pt;
     align-items: flex-start;
+    align-content: justify;
 }
 
+.recipPlace {
+    height:40px;
+    width: 500px;
+    background-color: grey;
+    padding: .2em;
+
+    border-top: 1.9px solid black;
+}
+
+
+.authorPlace {
+    height:20px;
+    width: 500px;
+    background-color: grey;
+    padding: .2em;
+    opacity: 66%;
+    color: black;
+
+    border-bottom: 1.5px solid black;
+}
+
+.topic {
+
+    height:40px;
+    width: auto;
+    background-color: #9c9c9c;
+    padding: .2em;
+    color: black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;;
+    opacity: 75%;
+    margin-left: -2%;
+    
+}
 
 
 #sendLetter {
