@@ -1,18 +1,7 @@
 import { getTopics, setTopic } from "./dataAccess.js"
 
-const entrees = getTopics()
+const topics = getTopics()
 
-
-
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "topics") {
-            setTopic(parseInt(event.target.value))
-            // window.alert(`User chose metal ${event.target.value}`)
-        }
-    }
-)
 
 
 

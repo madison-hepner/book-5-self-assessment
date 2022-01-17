@@ -86,64 +86,6 @@ return html
 }
 
 
-/*
-const convertRequestToListRecips = (recips) => {
-    
-    return `<li> ${recips.name} ${recips.email}
-    </li>`
-}
-*/
-
-
-    /* 
-    const recips = getRecips()
-    let recipshtml = "<ul>"
-
-    const recipItems = recips.map(recip => {
-        return `<li> ${recip.id}  ${recip.name}
-        </li> `
-    })
-
-    recipshtml += recipItems.join("")
-    recipshtml += "</ul>"
-
-    return recipshtml
-}
-//////////////////////////////////////////////////
-    
-
-    const authors = getAuthors()
-    let authorshtml = "<ul>"
-
-    const authorItems = authors.map(author => {
-        return `<li> ${author.id}  ${author.name}
-        </li> `
-    })
-
-    authorshtml += authorItems.join("")
-    authorshtml += "</ul>"
-
-    return authorshtml
-    }
-    
-
-/*
-    const recips = getRecips()
-        let html = "<ul>"
-
-        const recipItems = recips.map(recip => {
-            return `<li> ${recip.id}  ${recip.name}
-            </li> `
-      })
-
-        html += recipItems.join("")
-        html += "</ul>"
-
-        return html
-    }
-    
-    */
-
 const buildLetterListItem = (letters) => {
 
     const authors = getAuthors()
@@ -174,7 +116,7 @@ const buildLetterListItem = (letters) => {
 
     <div class="topicPlace">topic of: ${foundTopic.topic}</div>
 
-    <h4 class="authorPlace">sincerely ${foundAuthor.name}</h4>
+    <h4 class="authorPlace">Sincerely, ${foundAuthor.name}</h4>
     </ul>`
 
 }
@@ -196,108 +138,3 @@ export const sentLetters = () => {
 
     return html
 }
-
-    
-
-/*
-    let html = ""
-
-    for (const letters of getLetters()) {
-        
-        const foundRecip = getRecips().find(
-            (recips) => {
-                if (parseInt(letters.recipients) === recips.id) {
-                    return true
-                }
-                return false
-            }
-        )
-    
-    
-        const foundAuthor = getAuthors().find(
-            (authors) => {
-                if (parseInt(letters.authors) === authors.id) {
-                    return true
-                }
-                return false
-            }
-        )
-    
-        html += `<div class="recipName"> Dear ${foundRecip.name}</div>`
-    
-            html += `
-            <div class="letterhtml">${letters.letter}</div>
-            <div class="authorhtml">From your friend ${foundAuthor.name}</div>
-            
-            `
-    }
-
-
-    const sales = getPurchases()
-
-    let html = "<ul>"
-    const listPuchases = sales.map(
-        (sale) => {
-            return buildOrderListItem(sale)
-        }
-    )
-    html += listPuchases.join("")
-    html += "</ul>"
-
-    return html
-}
-*/
-
-/*
-const authors = getAuthors()
-    const recip = getRecips()
-    const letters = getLetters()
-    let html = `
-    <ul> 
-        ${
-            recip.map((recips) => convertRequestToListRecips(recip))
-        }
-
-    </ul>
-    `
-*/
-
-/*
-const convertRequestToListElement = (letter) => {
-    return `<li>${letter.letter} 
-    </li>`
-}
-
-export const Letters1 = () => {
-    const letters = getLetters()
-    let html = `
-    <ul> 
-        ${
-            letters.map((letter) => convertRequestToListElement(letter))
-        }
-    </ul>
-    `
-
-    return html
-}
-
-const buildLetterListItem = (letters) => {
-    const foundRecip = getRecips.find(
-        (recips) => {
-            return recips.id === letters.recipId
-        }
-    )
-
-    const foundAuthor = getAuthors.find(
-        (authors) => {
-            return authors.id === letters.AuthorId
-        }
-    )
-
-    const foundTopic = getTopics.find(
-        (topic) => {
-            return topic.id === topic.topicId
-        }
-    )
-
-*/

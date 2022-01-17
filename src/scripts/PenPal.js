@@ -27,6 +27,7 @@ export const letterForm = () => {
         </section>
     </article>
 
+
         <article class="sentLetters">
         <section class="view__sent options">
             <h2>Sent Letters</h2>

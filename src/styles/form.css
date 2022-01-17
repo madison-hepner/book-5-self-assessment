@@ -6,6 +6,7 @@
     padding: .8em;
     margin: none;
     border-radius:0.5em;
+    height: auto;
 }
 
 .field {
@@ -22,11 +23,14 @@
 }
 
 .recipPlace {
-    height:40px;
+    height: 40px;
     width: 525px;
     background-color: grey;
     padding: .2em;
-    border-top: 1.9px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius:  0 .5em .5em 0em;
 }
 
 
@@ -35,7 +39,7 @@
     width: 525px;
     background-color: grey;
     padding: .2em;
-    opacity: 66%;
+    opacity: 70%;
     color: black;
 
     border-bottom: 1.5px solid black;
@@ -55,11 +59,14 @@
     color: black;
     border-top: 2px solid black;
     border-right: 2px solid black;
-    border-bottom: 2px solid black;;
+    border-bottom: 2px solid black;
+    border-radius:  0 .5em .5em 0;
     opacity: 75%;
     margin-left: -2%;
+    border-left: none;
     
 }
+
 
 
 #sendLetter {

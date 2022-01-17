@@ -107,6 +107,7 @@ export const getTopics = () => {
 }
 
 
+
 export let setAuthors = (id) => {
     applicationState.authors.authorId = id
 }
@@ -120,7 +121,7 @@ export let setLetters = (id) => {
 }
 
 export let setTopic = (id) => {
-    applicationState.topics.typeId = id
+    applicationState.topics.topicId = id
 }
 
 
